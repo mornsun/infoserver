@@ -1,0 +1,9 @@
+# InfoServer parameters
+infoServerTCPPort: 39088
+
+#GeoIP
+geoIPInfoFile: ss-geoip.utf8
+
+#Update(/second)
+updatePeriod: 60
+

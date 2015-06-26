@@ -1,0 +1,142 @@
+# Experiment points
+points:
+ - sid: 1
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: OR
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: OR
+         value: 0-49
+ - sid: 2
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+       - type: HASH
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 100-100
+ - sid: 3
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 0-19
+ - sid: 4
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 0-49
+    - key: uid
+      relation: AND
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 51-100
+ - sid: 5
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2014 00:00:00 GMT+8"
+   conditions:
+    - key: uid
+      relation: OR
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: OR
+         value: 0-49
+       - type: RANGE
+         relation: OR
+         value: 51-99
+ - sid: 5
+   startTime: "11/22/2014 00:00:00 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 51-99
+ - sid: 11
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+       - type: MOD
+         value: 100
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 0-49
+    - key: province
+      relation: AND
+      operators:
+      asserters:
+       - type: EQ
+         relation: OR
+         value: 北京
+       - type: EQ
+         relation: OR
+         value: 北京市
+ - sid: 12
+   startTime: "11/22/2013 13:30:11 GMT+8"
+   endTime: "11/22/2015 13:30:11 GMT+8"
+   conditions:
+    - key: uid
+      relation: AND
+      operators:
+      asserters:
+       - type: RANGE
+         relation: AND
+         value: 50000-50049
+    - key: os
+      relation: AND
+      asserters:
+       - type: EQ
+         relation: AND
+         value: ios
+    - key: isp
+      relation: AND
+      asserters:
+       - type: EQ
+         relation: OR
+         value: 其他
+       - type: EQ
+         relation: OR
+         value: 北京市
